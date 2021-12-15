@@ -3,8 +3,8 @@ const ctx = canvas.getContext('2d')
 const d = 3
 const tileWidth = canvas.width / d
 const tileHeight = canvas.height / d
-const tileColor = '#ccccff'
-const canvasColor = '#eee'
+const tileColor = '#cc66ff'
+const canvasColor = '#cc99ff'
 canvas.style.backgroundColor = canvasColor
 
 class Tile
@@ -26,13 +26,14 @@ class Tile
             ctx.fillRect(this.col * tileWidth, this.row * tileHeight, tileWidth, tileHeight)
             ctx.strokeRect(this.col * tileWidth, this.row * tileHeight, tileWidth, tileHeight)
             ctx.font = `${tileWidth * 0.6}px Arial`
-            ctx.fillStyle = "blue"
+            ctx.fillStyle = "black"
             ctx.textAlign = 'center'
             ctx.textBaseline = "middle"
             ctx.fillText(this.val, this.col * tileWidth + tileWidth / 2, this.row * tileHeight + tileHeight / 2)
         }
     }
 }
+
 
 export class GameView
 {
